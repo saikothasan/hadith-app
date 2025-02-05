@@ -1,7 +1,10 @@
-"use client"
+import HadithGenerator from "@/components/HadithGenerator"
 
-import HadithGenerator from "../page"
-
-export default function SyntheticV0PageForDeployment() {
-  return <HadithGenerator />
+export default function Home() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-[#2b2d4c] to-[#1f2037]">
+      <HadithGenerator />
+    </div>
+  )
 }
+
