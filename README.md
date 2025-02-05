@@ -1,8 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Random Hadith Generator
+
+A modern, responsive web application built with Next.js 13 that allows users to discover authentic hadiths from various collections. The application provides both random and specific hadith generation capabilities.
+
+![Random Hadith Generator](https://your-domain.com/screenshot.png)
+
+## Features
+
+- 🎲 Random hadith generation
+- 🔍 Specific hadith lookup by number
+- 📚 Multiple hadith collections support:
+  - Sahih al-Bukhari
+  - Sahih Muslim
+  - Sunan Abu Dawud
+  - Jami' at-Tirmidhi
+  - Sunan Ibn Majah
+  - Sunan an-Nasa'i
+- 💫 Beautiful UI with animations
+- 📱 Fully responsive design
+- ⚡ Server-side rendering for optimal performance
+- 🌙 Modern glass-morphism design
+
+## Tech Stack
+
+- [Next.js 13](https://nextjs.org/) - React framework with App Router
+- [TypeScript](https://www.typescriptlang.org/) - Type safety
+- [Tailwind CSS](https://tailwindcss.com/) - Styling
+- [shadcn/ui](https://ui.shadcn.com/) - UI components
+- [Lucide Icons](https://lucide.dev/) - Beautiful icons
 
 ## Getting Started
 
-First, run the development server:
+First, clone the repository:
+
+```bash
+git clone https://github.com/saikothasan/hadith-app.git
+cd hadith-app
+```
+
+Install the dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
@@ -10,27 +55,73 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+hadith-app/
+├── app/
+│   ├── layout.tsx
+│   └── page.tsx
+├── components/
+│   ├── HadithGenerator.tsx
+│   ├── HadithDisplay.tsx
+│   └── ui/
+├── lib/
+│   └── api.ts
+├── types/
+│   └── hadith.ts
+└── public/
+```
 
-## Learn More
+## API Reference
 
-To learn more about Next.js, take a look at the following resources:
+The application uses the Random Hadith Generator API:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Base URL: `https://random-hadith-generator.vercel.app`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Endpoints
 
-## Deploy on Vercel
+- GET `/{collection}` - Get a random hadith from the specified collection
+- GET `/{collection}/{number}` - Get a specific hadith by number from the specified collection
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Available collections:
+- bukhari
+- muslim
+- abudawud
+- tirmidhi
+- ibnmajah
+- nasai
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Credits
+
+- API provided by [Random Hadith Generator](https://random-hadith-generator.vercel.app/)
+- Created by [@Drkingbd](https://t.me/drkingbd)
+
+## Deploy
+
+You can deploy this app to Vercel with one click:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsaikothasan%2Fhadith-app)
+
+---
+
+Made with ❤️ by [@Drkingbd](https://t.me/drkingbd)
+```
