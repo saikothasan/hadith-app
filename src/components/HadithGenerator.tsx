@@ -45,14 +45,14 @@ export default function HadithGenerator() {
   return (
     <main className="container mx-auto flex flex-col items-center justify-center min-h-screen p-4">
       <div className="text-center mb-12 space-y-2">
-        <h1 className="text-3xl font-bold text-white">Random Hadith Generator</h1>
-        <p className="text-white/70">Discover the wisdom of authentic hadiths</p>
+        <h1 className="text-4xl font-bold text-white tracking-tight">Random Hadith Generator</h1>
+        <p className="text-teal-200">Discover the wisdom of authentic hadiths</p>
       </div>
 
-      <div className="w-full max-w-2xl space-y-8">
+      <div className="w-full max-w-2xl space-y-8 backdrop-blur-lg bg-white/10 p-8 rounded-lg shadow-xl">
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Select value={collection} onValueChange={setCollection}>
-            <SelectTrigger className="w-full sm:w-[180px] bg-white/5 border-white/10 text-white">
+            <SelectTrigger className="w-full sm:w-[180px] bg-white/20 border-white/30 text-white">
               <SelectValue placeholder="Select collection" />
             </SelectTrigger>
             <SelectContent>
@@ -65,10 +65,10 @@ export default function HadithGenerator() {
             </SelectContent>
           </Select>
           <Button
-            variant="outline"
+            variant="secondary"
             onClick={() => handleFetchHadith(true)}
             disabled={loading}
-            className="w-full sm:w-auto border-white/10 text-white hover:bg-white/10 hover:text-white transition-colors"
+            className="w-full sm:w-auto bg-teal-500 hover:bg-teal-600 text-white transition-colors"
           >
             {loading ? <Loader2 className="w-4 h-4 mr-2 animate-spin" /> : null}
             Generate Random
@@ -82,13 +82,13 @@ export default function HadithGenerator() {
               placeholder="Enter Hadith Number"
               value={hadithNumber}
               onChange={(e) => setHadithNumber(e.target.value)}
-              className="w-full sm:w-[180px] bg-white/5 border-white/10 text-white placeholder:text-white/50"
+              className="w-full sm:w-[180px] bg-white/20 border-white/30 text-white placeholder:text-white/60"
             />
             <Button
-              variant="outline"
+              variant="secondary"
               onClick={() => handleFetchHadith(false)}
               disabled={loading}
-              className="w-full sm:w-auto border-white/10 text-white hover:bg-white/10 hover:text-white transition-colors"
+              className="w-full sm:w-auto bg-teal-500 hover:bg-teal-600 text-white transition-colors"
             >
               {loading ? <Loader2 className="w-4 h-4 mr-2 animate-spin" /> : null}
               Generate Custom
@@ -99,14 +99,14 @@ export default function HadithGenerator() {
         {hadith && <HadithDisplay hadith={hadith} />}
       </div>
 
-      <footer className="mt-12 text-center text-white/70">
+      <footer className="mt-12 text-center text-teal-200">
         <p className="flex items-center justify-center gap-2">
           Created by{" "}
           <a
             href="https://t.me/drkingbd"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white hover:text-white/90 flex items-center gap-1 font-medium"
+            className="text-white hover:text-teal-300 flex items-center gap-1 font-medium transition-colors"
           >
             @Drkingbd
             <ExternalLink className="w-4 h-4" />
